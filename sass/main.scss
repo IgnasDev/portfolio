@@ -28,19 +28,21 @@ li {
 }
 
 body,html {
+  overflow-x: hidden;
+
   margin: 0;
   padding: 0;
   font-size: 62.5%;
   font-family: 'Merriweather', serif;
   color: $fn-color;
-  max-width: 100vw;
+  max-width: 100%;
   max-height: 100%;
   box-sizing: inherit;
   background: lighten($bg-color, 8%);
 }
 
 .wrapper {
-  max-width: 100vw;
+
   padding: 3rem;
 }
 
@@ -139,6 +141,11 @@ body,html {
     }
   }
 
+  @media only screen and (max-width: 830px) {
+   &__middle-box {
+     display: none;
+   }
+}
   &__text-box {
     position: absolute;
     top: 50%;
@@ -196,6 +203,7 @@ body,html {
     transform: translate(-50%,-50%);
     display: flex;
     flex-direction: column;
+    width: 80%;
   }
   &__heading {
     font-size: 3rem;
@@ -215,6 +223,7 @@ body,html {
 
 // WORK SECTION STYLING
 .section-work {
+  margin-top: 10rem;
   max-width: 100%;
   height: 100vh;
   display: flex;
