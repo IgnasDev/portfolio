@@ -1,0 +1,280 @@
+// VARIABLES
+$bg-color: #08090A;
+$fn-color: #F4FAFF;
+
+// GENERAL/ RESET
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $fn-color;
+}
+
+li {
+  list-style: none;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: 'Merriweather', serif;
+  color: $fn-color;
+  max-width: 100vw;
+  max-height: 100%;
+  box-sizing: inherit;
+  background: lighten($bg-color, 8%);
+}
+
+.wrapper {
+  max-width: 100vw;
+  padding: 3rem;
+}
+
+// UTILITY
+#particles-js {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.burger-line {
+  width: 100%;
+  height: .5rem;
+  margin: .6rem 0;
+  background: #fff;
+}
+
+.hided-navigation {
+  z-index: 500;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  &__li {
+    font-size: 4rem;
+    display: block;
+    margin: 5rem 0;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+  }
+  &__a {
+    display: block;
+
+    color: darken($fn-color, 8%);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+// MAIN SECTION STYLING
+.section-main {
+  max-width: 100vw;
+  font-size: 2rem;
+  position: relative;
+  height: 90vh;
+  &__navbar {
+    max-width: 100%;
+    z-index: 600;
+    position: fixed;
+    left: 5rem;
+    right: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__logo {
+    font-size: 3rem;
+  }
+  &__burger-icon {
+    width: 5rem;
+    cursor: pointer;
+  }
+  &__middle-box {
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    right: 5rem;
+    left: 5rem;
+    margin-top: -5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__right-social {
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    a {
+      color: $fn-color;
+      display: block;
+      background: rgba(255,255,255, .1);
+      padding: .5rem;
+      margin: .3rem 0;
+    }
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    margin-top: -5rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      width: 30rem;
+    }
+  }
+
+
+  &__sticked-footer {
+    z-index: 400;
+    max-width: 100%;
+    position: fixed;
+    bottom: 2rem;
+    left: 5rem;
+    right: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__left-content {
+   &-p {
+     display: inline-block;
+     margin-right: 1rem;
+   }
+  }
+
+  @media only screen and (max-width: 830px) {
+    &__sticked-footer {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__left-content {
+      text-align: center;
+    }
+ }
+}
+
+// ABOUT SECTION STYLING
+.section-about {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+  }
+  &__heading {
+    font-size: 3rem;
+  }
+  &__right-content {
+    margin: 2rem 0;
+    font-size: 1.3rem;
+  }
+
+  @media only screen and (max-width: 830px) {
+   &__text-box {
+     width: 100%;
+   }
+ }
+}
+
+
+// WORK SECTION STYLING
+.section-work {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__text-content {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__row {
+    margin-top: 8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__card {
+    margin: 1rem;
+    border-radius: 1rem;
+    z-index: 400;
+    width: 35rem;
+    height: 30rem;
+    -webkit-box-shadow: 1px 1px 9px 0px rgba(255,255,255,.5);
+    -moz-box-shadow: 1px 1px 9px 0px rgba(255,255,255,.5);
+    box-shadow: 1px 1px 9px 0px rgba(255,255,255,.5);
+    cursor: pointer;
+    font-size: 2rem;
+    text-align: center;
+    a {
+      display: block;
+      height: 30rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
